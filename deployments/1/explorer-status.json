@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-09-27T11:55:02.501Z",
+  "contracts": [
+    {
+      "name": "OfferSupport",
+      "address": "0xfac58A7AB57176D5c10D6a7862C93b50c1B43CE7",
+      "etherscan": "verified"
+    },
+    {
+      "name": "BackingQueue",
+      "address": "0x16A167E745497b3E308E81492bc1b6a93A620929",
+      "etherscan": "verified"
+    },
+    {
+      "name": "ImdOracleAdapter",
+      "address": "0x93a9DD050892EC7CeDCa8825FE655Da53DbC1388",
+      "etherscan": "verified"
+    },
+    {
+      "name": "Pepe2PepeMarket",
+      "address": "0x54F97d8b32d8E90770d76B7d9eEDE1B77E28E3B8",
+      "etherscan": "verified"
+    }
+  ]
+}

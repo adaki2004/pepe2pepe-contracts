@@ -1,0 +1,15 @@
+{
+  "name": "pepe2pepe-contracts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Deployed Pepe2Pepe fixed-odds FIFO contracts and reproducible deployment checks.",
+  "scripts": {
+    "build": "node scripts/verify.mjs",
+    "verify:chain": "node scripts/verify.mjs --chain"
+  },
+  "devDependencies": {
+    "solc": "0.8.37",
+    "ethers": "6.17.0"
+  }
+}

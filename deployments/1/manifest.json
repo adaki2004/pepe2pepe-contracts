@@ -1,0 +1,63 @@
+{
+  "chainId": 1,
+  "deployer": "0x0A5b0e232d47541eB503bC862a9DB2672b8fBa24",
+  "compiler": "0.8.37+commit.f401782d",
+  "contracts": [
+    {
+      "name": "OfferSupport",
+      "address": "0xfac58A7AB57176D5c10D6a7862C93b50c1B43CE7",
+      "constructorArgs": [],
+      "nonce": 130,
+      "dataHash": "0xdee16cbfc039f70dd47a49e14d9c8faf0d3d2bfe0f8e44c92a180c4dd8bf870b",
+      "transactionHash": "0xda0d37e5da8cb32e930c746a0d715b14c435b9af6385905e13ae493e308a588c",
+      "blockNumber": 26068376,
+      "runtimeCodeHash": "0x844ff9485a507e9172856034103c6ee1d59a8d2f825647197361f1a6ed239bad"
+    },
+    {
+      "name": "BackingQueue",
+      "address": "0x16A167E745497b3E308E81492bc1b6a93A620929",
+      "constructorArgs": [],
+      "nonce": 131,
+      "dataHash": "0xd54548ad6fdd174091e7761cf2447526c5caeade73201c6974a8220e2bae1eb5",
+      "transactionHash": "0xf5787db3a287738421567b4ebadc65a5b70fb439eab96b9ba6428099c762a2e8",
+      "blockNumber": 26068377,
+      "runtimeCodeHash": "0xf6ca91fefc60d016f047b4472342e598c01113442621f1578168375cd292ef21"
+    },
+    {
+      "name": "ImdOracleAdapter",
+      "address": "0x93a9DD050892EC7CeDCa8825FE655Da53DbC1388",
+      "constructorArgs": [
+        "0x5598Aa9146215Bc13eb26f2c692Ad1461Fd32982",
+        1
+      ],
+      "nonce": 132,
+      "dataHash": "0x767b588681fa13fc07c8ac911eb31dd7dd24cc509986d603418509407ba60de0",
+      "transactionHash": "0xbabafd979ed70052a0f5763482208983ec5db719c7a04507cdff0936edb9df1d",
+      "blockNumber": 26068378,
+      "runtimeCodeHash": "0xf2c3e13dc341a44b2cbadc855ac5dc92c5c9989272c5ab4a9761e9ba75073de3"
+    },
+    {
+      "name": "Pepe2PepeMarket",
+      "address": "0x54F97d8b32d8E90770d76B7d9eEDE1B77E28E3B8",
+      "constructorArgs": [
+        "0x0000ec93127baa929e58e97dd0095a2bfb38ec1d",
+        1,
+        "0x0A5b0e232d47541eB503bC862a9DB2672b8fBa24",
+        "0x93a9DD050892EC7CeDCa8825FE655Da53DbC1388",
+        [
+          "0x0A5b0e232d47541eB503bC862a9DB2672b8fBa24",
+          "0x0A5b0e232d47541eB503bC862a9DB2672b8fBa24",
+          "0x0A5b0e232d47541eB503bC862a9DB2672b8fBa24",
+          "0x0A5b0e232d47541eB503bC862a9DB2672b8fBa24",
+          "0x0A5b0e232d47541eB503bC862a9DB2672b8fBa24",
+          "0x0A5b0e232d47541eB503bC862a9DB2672b8fBa24"
+        ]
+      ],
+      "nonce": 133,
+      "dataHash": "0xbb8680e1c39b665e7e2de7c9b1dddbd732ddf8ed42f1c5dae7de24b623b24e77",
+      "transactionHash": "0x679f9a0c08a20c38d8f0ccb7d419158fce58e71d0dba2be7e8ccbceb74f64194",
+      "blockNumber": 26068379,
+      "runtimeCodeHash": "0x73a3d5a5e25233606b79ccb0cb22fa1fa6126175c897f48d2e530192346e8f19"
+    }
+  ]
+}
