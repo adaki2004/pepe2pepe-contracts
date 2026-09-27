@@ -11,7 +11,7 @@ Fully collateralized, fixed-odds P2P betting with FIFO shared backing. Exact dep
 | ImdOracleAdapter | [`0x93a9DD050892EC7CeDCa8825FE655Da53DbC1388`](https://etherscan.io/address/0x93a9DD050892EC7CeDCa8825FE655Da53DbC1388#code) | [`0xfc91C1A8482acf3bE973dAee66e13Ac82b4c19c7`](https://robin.etherscan.io/address/0xfc91C1A8482acf3bE973dAee66e13Ac82b4c19c7#code) |
 | Pepe2PepeMarket | [`0x54F97d8b32d8E90770d76B7d9eEDE1B77E28E3B8`](https://etherscan.io/address/0x54F97d8b32d8E90770d76B7d9eEDE1B77E28E3B8#code) | [`0x412F9b71c119Aee1bec6331a7Cb7Bb5c4fa1518B`](https://robin.etherscan.io/address/0x412F9b71c119Aee1bec6331a7Cb7Bb5c4fa1518B#code) |
 
-Both libraries and market contracts are explorer-verified. Robinhood’s Oracle adapter verification is still queued as of 27 September 2026; see each explorer and the dated status snapshots. The contracts are shared by staging and the intended production app; TP20 is a testing asset, not a separate custody deployment.
+All eight contracts (both libraries, market and Oracle adapter on each chain) are explorer-verified as of 27 September 2026; see each explorer and the dated status snapshots. The contracts are shared by staging and the intended production app; TP20 is a testing asset, not a separate custody deployment.
 
 ## Reproduce
 
@@ -34,3 +34,5 @@ The offline build verifies all eight complete **creation bytecode + constructor 
 Creation is permissionless. Fixed accepted returns and separate unused collateral are enforced on-chain. Authorized operators may replace requests, emergency-VOID or set YES/NO/VOID **before finalization**. Admins can change configuration for future actions; inspect the source and live roles. Oracle votes and human oversight do not guarantee truth or safety.
 
 `reports/` contains existing AI-assisted review output and a later FIFO implementation review. The earlier scan covered a pre-FIFO candidate and returned 8 of 12 requested specialist reports. These are **not an independent external audit**, nor a new audit of the deployed FIFO code. No additional audit was run for this publication.
+
+The separately preserved `reports/PASHOV_AI_LEGACY_SCOPE_20260927.md` reports no findings but explicitly lists the older pari-mutuel files, including `PepedictionMarket.sol`. Its scope does **not** establish an audit of the current `Pepe2PepeMarket` FIFO deployment.

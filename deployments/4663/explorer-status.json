@@ -1,25 +1,78 @@
 {
-  "checkedAt": "2026-09-27T16:38:32.113Z",
+  "chainId": 4663,
+  "checkedAt": "2026-09-27T17:15:55.137Z",
   "contracts": [
     {
       "name": "OfferSupport",
       "address": "0x24f4A843cD688FA7961B98DeAec3CaE0571B404C",
-      "etherscan": "verified"
+      "compiler": "v0.8.37+commit.f401782d",
+      "input": "deployments/verification/4663/OfferSupport.input.json",
+      "blockscout": "unavailable",
+      "etherscan": "verified",
+      "explorer": "https://robin.etherscan.io",
+      "blockscoutResponse": {
+        "message": "Non-JSON response (HTTP 403)"
+      },
+      "etherscanResponse": {
+        "status": "1",
+        "message": "OK",
+        "result": "Verified source and ABI read back"
+      },
+      "etherscanGuid": "ffdusn9dged4i97t88pm79xgmswsngquapd6me2l9cd4esyplg"
     },
     {
       "name": "BackingQueue",
       "address": "0x0852dC585f7E0c1bC2F0F198fD907Cd668BeD984",
-      "etherscan": "verified"
+      "compiler": "v0.8.37+commit.f401782d",
+      "input": "deployments/verification/4663/BackingQueue.input.json",
+      "blockscout": "unavailable",
+      "etherscan": "verified",
+      "explorer": "https://robin.etherscan.io",
+      "blockscoutResponse": {
+        "message": "Non-JSON response (HTTP 403)"
+      },
+      "etherscanResponse": {
+        "status": "1",
+        "message": "OK",
+        "result": "Verified source and ABI read back"
+      },
+      "etherscanGuid": "1wq4w28bjcwlnqrgmtfpcxc4ezdvzvgsrmr3jyf9arjvvrmwml"
     },
     {
       "name": "ImdOracleAdapter",
       "address": "0xfc91C1A8482acf3bE973dAee66e13Ac82b4c19c7",
-      "etherscan": "submitted"
+      "compiler": "v0.8.37+commit.f401782d",
+      "input": "deployments/verification/4663/ImdOracleAdapter.input.json",
+      "blockscout": "unavailable",
+      "etherscan": "verified",
+      "explorer": "https://robin.etherscan.io",
+      "blockscoutResponse": {
+        "message": "Non-JSON response (HTTP 403)"
+      },
+      "etherscanResponse": {
+        "status": "1",
+        "message": "OK",
+        "result": "Verified source and ABI read back"
+      },
+      "etherscanGuid": "fgbr7efnj4hsfc83ldn9beav2i5kk9ya5cx5tr2buum2psv4re"
     },
     {
       "name": "Pepe2PepeMarket",
       "address": "0x412F9b71c119Aee1bec6331a7Cb7Bb5c4fa1518B",
-      "etherscan": "verified"
+      "compiler": "v0.8.37+commit.f401782d",
+      "input": "deployments/verification/4663/Pepe2PepeMarket.input.json",
+      "blockscout": "unavailable",
+      "etherscan": "verified",
+      "explorer": "https://robin.etherscan.io",
+      "blockscoutResponse": {
+        "message": "Non-JSON response (HTTP 403)"
+      },
+      "etherscanResponse": {
+        "status": "1",
+        "message": "OK",
+        "result": "Verified source and ABI read back"
+      },
+      "etherscanGuid": "8m6fxv9wqhgwbthdv6ks53fvekiixz8i3xqjavzj6mut4jk4kr"
     }
   ]
 }
