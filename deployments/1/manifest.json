@@ -58,6 +58,31 @@
       "transactionHash": "0x679f9a0c08a20c38d8f0ccb7d419158fce58e71d0dba2be7e8ccbceb74f64194",
       "blockNumber": 26068379,
       "runtimeCodeHash": "0x73a3d5a5e25233606b79ccb0cb22fa1fa6126175c897f48d2e530192346e8f19"
+    },
+    {
+      "name": "ImdAttestationV2",
+      "address": "0xE3630c843Fde8A950c962410EF92a8C6848b3de5",
+      "constructorArgs": [],
+      "nonce": 182,
+      "dataHash": "0x335ab66ec7a637c8b650c1a38ff8e70fc238ac0349629cf971c21194799da306",
+      "transactionHash": "0xf44ab506452d6cffe86c5a507e1bd8dc9212c39de80aef8318e180ade88f6c12",
+      "blockNumber": 26103528,
+      "runtimeCodeHash": "0x18a1867c22e0f1a6ec01198781edd810ce82d4e6243832bae9ae09f9666e5052"
+    },
+    {
+      "name": "VersionedImdOracleAdapter",
+      "address": "0xF5602ae57E8d104Cfe34A819091694f7d376Bd55",
+      "constructorArgs": [
+        "0x0A5b0e232d47541eB503bC862a9DB2672b8fBa24",
+        "0x5598Aa9146215Bc13eb26f2c692Ad1461Fd32982",
+        1,
+        "0xE3630c843Fde8A950c962410EF92a8C6848b3de5"
+      ],
+      "nonce": 183,
+      "dataHash": "0x95456a32e1f5cf00428e6cfb658fbb58e8b6a8b1161d6721505c6cb285b11231",
+      "transactionHash": "0x90266259fb4b0fce30e188cc9e614a7d989a856a97ffe17bcbc54d1aa1a3dcb1",
+      "blockNumber": 26103531,
+      "runtimeCodeHash": "0x024b232abbf7d8514b0ecc154aee94242aa6a1ba4553dd46f29ac7471976cf0f"
     }
   ]
 }

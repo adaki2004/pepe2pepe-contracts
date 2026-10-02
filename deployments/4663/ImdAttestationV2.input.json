@@ -1,0 +1,45 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "src/ImdAttestationV2.sol": {
+      "content": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.37;\n\nimport {IImdAttestationVerifier} from \"./interfaces/IImdAttestationVerifier.sol\";\n\n/// @title IdentityMD Oracle EIP-712 version 2 codec\n/// @notice Stateless, immutable decoding/hashing for signatures that bind panelSize, quorum and agreed.\n/// @dev Holds no funds, permissions, signer or domain. The calling adapter supplies its own domain\n///      and validates the recovered signer and all common fields. This contract is not a proxy.\ncontract ImdAttestationV2 is IImdAttestationVerifier {\n    /// @notice Exact deployed IdentityMD version 2 signed schema; field order is significant.\n    bytes32 public constant TYPE_HASH = keccak256(\n        \"OracleAttestation(bytes32 requestId,uint256 chainId,bytes32 questionHash,uint8 answerType,bytes answer,uint256 figure,uint64 fromBlock,uint64 toBlock,bytes32 blockHash,bytes32 panelJobId,uint16 panelSize,uint16 quorum,uint16 agreed,uint64 issuedAt,uint64 expiresAt)\"\n    );\n\n    /// @inheritdoc IImdAttestationVerifier\n    function signatureVersion() external pure returns (uint32) {\n        return 2;\n    }\n\n    /// @inheritdoc IImdAttestationVerifier\n    function schemaHash() external pure returns (bytes32) {\n        return TYPE_HASH;\n    }\n\n    /// @inheritdoc IImdAttestationVerifier\n    function decodeAndHash(bytes calldata payload)\n        external\n        pure\n        returns (Attestation memory a, bytes32 structHash)\n    {\n        a = abi.decode(payload, (Attestation));\n        structHash = keccak256(\n            abi.encode(\n                TYPE_HASH,\n                a.requestId,\n                a.chainId,\n                a.questionHash,\n                a.answerType,\n                keccak256(a.answer),\n                a.figure,\n                a.fromBlock,\n                a.toBlock,\n                a.blockHash,\n                a.panelJobId,\n                a.panelSize,\n                a.quorum,\n                a.agreed,\n                a.issuedAt,\n                a.expiresAt\n            )\n        );\n    }\n}\n"
+    },
+    "src/interfaces/IImdAttestationVerifier.sol": {
+      "content": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.37;\n\n/// @title Version-specific IdentityMD attestation decoding\n/// @notice A read-only codec; the stable adapter checks market binding, quorum and the signer.\n/// @dev Every returned field MUST be authenticated by structHash. Registering a dishonest codec\n///      can falsify that relationship, so codec registration remains a delayed governance trust.\ninterface IImdAttestationVerifier {\n    /// @dev Common authenticated fields required by every supported wire version.\n    struct Attestation {\n        bytes32 requestId;\n        uint256 chainId;\n        bytes32 questionHash;\n        uint8 answerType;\n        bytes answer;\n        uint256 figure;\n        uint64 fromBlock;\n        uint64 toBlock;\n        bytes32 blockHash;\n        bytes32 panelJobId;\n        uint16 panelSize;\n        uint16 quorum;\n        uint16 agreed;\n        uint64 issuedAt;\n        uint64 expiresAt;\n    }\n\n    /// @notice Numeric EIP-712 domain version this codec implements.\n    function signatureVersion() external pure returns (uint32);\n\n    /// @notice EIP-712 type hash identifying the exact schema implemented by this codec.\n    function schemaHash() external pure returns (bytes32);\n\n    /// @notice Decode exact wire fields and hash their EIP-712 struct, excluding the domain/signature.\n    /// @param payload ABI-encoded version-specific attestation, without market text or signature.\n    /// @return attestation Common fields authenticated by the returned struct hash.\n    /// @return structHash EIP-712 struct hash including ALL version-specific signed fields.\n    function decodeAndHash(bytes calldata payload)\n        external\n        view\n        returns (Attestation memory attestation, bytes32 structHash);\n}\n"
+    }
+  },
+  "settings": {
+    "remappings": [
+      "@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+      "forge-std/=lib/forge-std/src/"
+    ],
+    "optimizer": {
+      "enabled": true,
+      "runs": 1
+    },
+    "metadata": {
+      "useLiteralContent": false,
+      "bytecodeHash": "none",
+      "appendCBOR": true
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode.object",
+          "evm.bytecode.sourceMap",
+          "evm.bytecode.linkReferences",
+          "evm.deployedBytecode.object",
+          "evm.deployedBytecode.sourceMap",
+          "evm.deployedBytecode.linkReferences",
+          "evm.deployedBytecode.immutableReferences",
+          "evm.methodIdentifiers",
+          "metadata"
+        ]
+      }
+    },
+    "evmVersion": "cancun",
+    "viaIR": true,
+    "libraries": {}
+  }
+}

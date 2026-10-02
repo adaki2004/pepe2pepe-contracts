@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-27T11:55:02.501Z",
+  "checkedAt": "2026-10-02T08:51:47.564Z",
   "contracts": [
     {
       "name": "OfferSupport",
@@ -20,6 +20,36 @@
       "name": "Pepe2PepeMarket",
       "address": "0x54F97d8b32d8E90770d76B7d9eEDE1B77E28E3B8",
       "etherscan": "verified"
+    },
+    {
+      "name": "ImdAttestationV2",
+      "address": "0xE3630c843Fde8A950c962410EF92a8C6848b3de5",
+      "compiler": "v0.8.37+commit.f401782d",
+      "input": "deployments/1/ImdAttestationV2.input.json",
+      "blockscout": "compiler not supported yet",
+      "etherscan": "verified",
+      "explorer": "https://etherscan.io",
+      "etherscanResponse": {
+        "status": "1",
+        "message": "OK",
+        "result": "Verified source and ABI read back"
+      },
+      "etherscanGuid": "rs2tdi1m3nmcqn3mhlmt2febe2bf64qgseckr4kzwr8u6kjesz"
+    },
+    {
+      "name": "VersionedImdOracleAdapter",
+      "address": "0xF5602ae57E8d104Cfe34A819091694f7d376Bd55",
+      "compiler": "v0.8.37+commit.f401782d",
+      "input": "deployments/1/VersionedImdOracleAdapter.input.json",
+      "blockscout": "compiler not supported yet",
+      "etherscan": "verified",
+      "explorer": "https://etherscan.io",
+      "etherscanResponse": {
+        "status": "1",
+        "message": "OK",
+        "result": "Verified source and ABI read back"
+      },
+      "etherscanGuid": "ztrhkyit1uh4pw2uifwu5r7ntbbjzm8irfhc6dupx1zayfnbqw"
     }
   ]
 }
