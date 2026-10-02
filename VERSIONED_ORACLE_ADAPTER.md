@@ -1,5 +1,12 @@
 # Versioned Oracle adapter
 
+Live since 2 October 2026. Both adapters are the production defaults for future
+markets (platform configuration version 6):
+[Ethereum activation](https://etherscan.io/tx/0x75eba33ad23576275ab31e687054245f9107f7501cc51e2f56fe2eb137995892),
+[Robinhood activation](https://robin.etherscan.io/tx/0xfb1e64950f609d1b0d598557d95cde3966b5819e17646f92407916bc0b3e35b0).
+Existing markets retain their original adapters. The separate TP20-only staging
+custody was not migrated in this rollout.
+
 The market's existing `settleMarket(id, bytes proof)` interface is unchanged.
 `VersionedImdOracleAdapter` is a stable-address, non-proxy implementation of
 `IOracleAdapter`. The v2 codec decodes and hashes the actual IdentityMD message,
@@ -18,6 +25,11 @@ question/rules/URI, reconstructed canonical document, market/id/terms, source
 chain/window, request UUID, consumer chain, outcome encoding and proof validity.
 The public question omits metadataURI as before. Custody controls finalization,
 replay protection and payouts. A permissionless relayer cannot redirect winnings.
+Back-office approval only gates the platform's relayer. If custody publicFinalization
+is enabled, anyone may submit a valid proof without that approval, including before
+human review or despite a backend Hold. No on-chain challenge period is provided,
+and an operator cannot rewrite a finalized result. Public finalization remains off
+in this rollout.
 
 The initial owner is the existing admin wallet, with two-step ownership transfer.
 The service wallet is not the owner. Adding a previously unused version requires
